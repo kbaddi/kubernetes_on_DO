@@ -1,4 +1,6 @@
 # Rename this file to terraform.tfvars and replace wiht desired values
+cluster_name = "my-kluster"
+region = "nyc-1"
 slug_version = "1.16.6-do.2" 
 node_size = "s-4vcpu-8gb"
 min_nodes = 2

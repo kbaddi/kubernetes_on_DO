@@ -1,3 +1,3 @@
 output "kubeconfig" {
-    value = digitalocean_kubernetes_cluster.axl.kube_config.0 
+    value = digitalocean_kubernetes_cluster.k8s.kube_config.0 
 }

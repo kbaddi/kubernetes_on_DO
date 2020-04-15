@@ -1,10 +1,9 @@
-resource "digitalocean_kubernetes_cluster" "axl" {
-  name    = "axl"
-  region  = "nyc1"
+resource "digitalocean_kubernetes_cluster" "k8s" {
+  name    = var.cluster_name
+  region  = var.region
   # Grab the latest version slug from `doctl kubernetes options versions`
   version = var.slug_version
   tags    = ["staging"]
-
   node_pool {
     name       = "worker-pool"
     size       = var.node_size
@@ -17,10 +16,10 @@ resource "digitalocean_kubernetes_cluster" "axl" {
 
 provider "kubernetes" {
   load_config_file = false
-  host  = digitalocean_kubernetes_cluster.axl.endpoint
-  token = digitalocean_kubernetes_cluster.axl.kube_config[0].token
+  host  = digitalocean_kubernetes_cluster.k8s.endpoint
+  token = digitalocean_kubernetes_cluster.k8s.kube_config[0].token
   cluster_ca_certificate = base64decode(
-    digitalocean_kubernetes_cluster.axl.kube_config[0].cluster_ca_certificate
+    digitalocean_kubernetes_cluster.k8s.kube_config[0].cluster_ca_certificate
   )
 }
 

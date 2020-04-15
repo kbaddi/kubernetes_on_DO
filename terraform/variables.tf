@@ -1,9 +1,13 @@
-// variable "do_token" {
+variable "cluster_name"{
 
-//     description = "Digital Ocean token, use it as Environment variable; `TV_VAR_do_token=<your-do-token>` "
+    description = "Desired Name for the cluster"
+    default = "my-k8s"
+}
 
-// }
-
+variable "region" {
+    description = "Desired region to create your cluster"
+    default = "nyc1"
+}
 variable "node_size" {
     description = "Size of K8s worker node"
     default = "s-1vcpu-1gb"
