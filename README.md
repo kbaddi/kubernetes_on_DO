@@ -32,6 +32,10 @@ export DIGITALOCEAN_TOKEN="<DO_TOKEN>"
           doctl kubernetes options regions
           ```
 
+```Note:``` Before you can execute the doctl commands, you will need to first initialize your DO api client and you can do that by running the below cmd and providing the PAT that you have generated in the beginning,
+
+	doctl auth init
+
     3. `slug_version` - This is the version of the Kubernetes version available in Digtial Ocean
     To get the latest Kuberneteres version run:
 
