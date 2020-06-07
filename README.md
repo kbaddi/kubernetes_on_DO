@@ -1,4 +1,4 @@
-# Terrraform Module to create a Kubernetes Cluster
+# Terrraform Module to create a Managed Kubernetes Cluster on Digital Ocean [DOKS]
 
 This module creates Kubernetes cluster with Auto scaling option. Just replace the Slug version, droplet size and min and max number of nodes and run `terraform apply` and your cluster is ready
 
