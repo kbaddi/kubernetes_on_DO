@@ -21,7 +21,7 @@ export DIGITALOCEAN_TOKEN="<DO_TOKEN>"
 
 ## Build your cluster
 
-1. git clone ``
+1. git clone https://github.com/kbaddi/kubernetes_on_DO.git
 2. cd Terraform
 3. Rename `terraformtfvars.copy` to `terraform.tfvars` and update the following values
     1. `cluster_name` - Desired name of the cluster.
